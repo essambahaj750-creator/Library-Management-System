@@ -131,16 +131,11 @@ They include the logical data model, detailed Data Dictionary, an editable Draw.
 The LMS interface has been upgraded with a modern role-aware design:
 
 - Professional fixed sidebar with SVG navigation icons
-- Premium login screen with all demo accounts
+- Premium login screen without exposing account credentials
 - Role-specific dashboards for Admin, Librarian, and Member
 - Member dashboard shows only the member's own loan information
 - Dashboard search bar, quick actions, KPI cards, recent circulation, and responsive layouts
 - Improved profile presentation and mobile behavior
-
-Demo Member account:
-
-- Username: `member`
-- Password: `Member@12345`
 
 ## Reference Implementation
 
