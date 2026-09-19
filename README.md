@@ -81,7 +81,8 @@ Library-Management-System/
 - Phase 2.8: Phase Closure Review — Completed
 - Phase 2: Project Management & Repository Setup — Completed
 - Phase 3: System Analysis Diagrams — Completed
-- Phase 4: Logical Data Design & Data Dictionary — Next
+- Phase 4: Logical Data Design & Data Dictionary — Completed
+- Phase 5: Implementation — Next
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
 - Phase 6: Testing & Review — Not Started
@@ -111,3 +112,12 @@ Phase 3 is documented under:
 `docs/analysis/`
 
 It includes Use Case, DFD Context/Level 1, Activity, and Sequence diagrams, all traceable to the approved SRS baseline.
+
+
+## Data Design
+
+Phase 4 data-design artifacts are available under:
+
+`docs/data-design/`
+
+They include the logical data model, detailed Data Dictionary, an editable Draw.io ERD, and the Phase 4 closure review.
