@@ -125,6 +125,23 @@ Phase 4 data-design artifacts are available under:
 They include the logical data model, detailed Data Dictionary, an editable Draw.io ERD, and the Phase 4 closure review.
 
 
+
+## Premium Interface Update
+
+The LMS interface has been upgraded with a modern role-aware design:
+
+- Professional fixed sidebar with SVG navigation icons
+- Premium login screen with all demo accounts
+- Role-specific dashboards for Admin, Librarian, and Member
+- Member dashboard shows only the member's own loan information
+- Dashboard search bar, quick actions, KPI cards, recent circulation, and responsive layouts
+- Improved profile presentation and mobile behavior
+
+Demo Member account:
+
+- Username: `member`
+- Password: `Member@12345`
+
 ## Reference Implementation
 
 A runnable academic implementation is available under:
