@@ -51,7 +51,12 @@ Library-Management-System/
 ├── docs/
 │   ├── SRS/
 │   └── project-management/
-│       └── PROJECT_BACKLOG.md
+│       ├── PROJECT_BACKLOG.md
+│       ├── TRELLO_MAPPING.md
+│       ├── GITHUB_TRELLO_WORKFLOW.md
+│       ├── GIT_WORKFLOW.md
+│       ├── PROJECT_TIMELINE.md
+│       └── PHASE2_REVIEW.md
 ├── src/
 └── tests/
 ```
@@ -65,8 +70,10 @@ Library-Management-System/
 - Phase 2.4: Requirements-to-Tasks Mapping — Completed
 - Phase 2.5: GitHub ↔ Trello Linking — Completed
 - Phase 2.6: Git Workflow & Branching Strategy — Completed
-- Phase 2.7: Project Timeline — Not Started
-- Phase 3: System Analysis Diagrams — Not Started
+- Phase 2.7: Project Timeline — Completed
+- Phase 2.8: Phase Closure Review — Completed
+- Phase 2: Project Management & Repository Setup — Completed
+- Phase 3: System Analysis Diagrams — Next
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
 - Phase 6: Testing & Review — Not Started
