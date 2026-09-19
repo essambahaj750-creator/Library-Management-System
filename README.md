@@ -61,7 +61,8 @@ Library-Management-System/
 - Phase 1: Requirements Analysis — Completed
 - Phase 2.1: GitHub Repository Setup — Completed
 - Phase 2.2: Project Backlog — Completed
-- Phase 2.3: Trello Board — Not Started
+- Phase 2.3: Trello Board — Completed
+- Phase 2.4: Requirements-to-Tasks Mapping — In Progress
 - Phase 3: System Analysis Diagrams — Not Started
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
