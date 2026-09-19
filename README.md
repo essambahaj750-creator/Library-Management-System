@@ -83,7 +83,8 @@ Library-Management-System/
 - Phase 3: System Analysis Diagrams — Completed
 - Phase 4: Logical Data Design & Data Dictionary — Completed
 - Phase 5: Implementation — Completed
-- Phase 6: Testing & Review — Next
+- Phase 6: Testing & Review — Completed
+- Phase 7: Final Documentation & Submission — Next
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
 - Phase 6: Testing & Review — Not Started
@@ -138,3 +139,12 @@ python app.py
 ```
 
 Automated tests are located under `tests/`.
+
+
+## Verification
+
+Testing evidence is documented under:
+
+`docs/testing/`
+
+The reference build passed 6/6 automated tests, HTTP smoke checks, local scale checks at 10,000 books / 5,000 members / 50,000 loans, and backup/restore checks.
