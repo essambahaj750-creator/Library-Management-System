@@ -444,6 +444,255 @@ svg.icon{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.9;s
   .profile-grid{display:block}
   .profile-card{margin-bottom:16px}
 }
+
+/* High-fidelity login redesign */
+body:has(.auth-page){background:#eef3f8}
+.auth-page{
+  min-height:100vh;
+  padding:34px;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 8% 12%,rgba(37,99,235,.11),transparent 25%),
+    radial-gradient(circle at 92% 88%,rgba(124,58,237,.09),transparent 24%),
+    linear-gradient(180deg,#f7f9fc 0%,#edf2f7 100%);
+}
+.auth-shell{
+  width:min(1180px,100%);
+  min-height:700px;
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  background:#fff;
+  border:1px solid rgba(148,163,184,.22);
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(15,23,42,.13);
+}
+.auth-brand{
+  position:relative;
+  overflow:hidden;
+  padding:54px 52px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 86% 12%,rgba(96,165,250,.25),transparent 22%),
+    radial-gradient(circle at 4% 94%,rgba(129,140,248,.18),transparent 26%),
+    linear-gradient(155deg,#091a2a 0%,#0f2d46 48%,#123f66 100%);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.auth-brand:before{
+  content:"";
+  position:absolute;
+  width:460px;height:460px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.07);
+  right:-230px;top:-200px;
+}
+.auth-brand:after{
+  content:"";
+  position:absolute;
+  width:250px;height:250px;
+  border-radius:50%;
+  background:rgba(59,130,246,.11);
+  left:-115px;bottom:-130px;
+}
+.auth-brand-top,.auth-brand-copy,.library-art{position:relative;z-index:2}
+.auth-brand-top{display:flex;align-items:center;gap:13px}
+.auth-brand-logo{
+  width:50px;height:50px;border-radius:15px;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.auth-brand-logo svg{width:25px;height:25px;stroke:#fff}
+.auth-brand-name{font-size:15px;font-weight:800;letter-spacing:.2px}
+.auth-brand-sub{font-size:11px;color:#a9c1d5;margin-top:3px}
+.auth-brand-copy{max-width:470px;margin:34px 0}
+.auth-kicker{
+  display:inline-flex;
+  align-items:center;gap:7px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  color:#d8e8f5;
+  font-size:11px;font-weight:700;
+  letter-spacing:.25px;
+}
+.auth-brand-copy h1{
+  margin:20px 0 14px;
+  font-size:44px;
+  line-height:1.08;
+  letter-spacing:-1.4px;
+}
+.auth-brand-copy p{
+  margin:0;
+  max-width:430px;
+  color:#bfd3e5;
+  font-size:14px;
+  line-height:1.8;
+}
+.library-art{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+  max-width:470px;
+  margin-top:28px;
+}
+.library-art-card{
+  min-height:112px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.11);
+  background:rgba(255,255,255,.06);
+  padding:14px;
+  backdrop-filter:blur(5px);
+}
+.library-art-card .art-icon{
+  width:34px;height:34px;border-radius:10px;
+  display:grid;place-items:center;
+  background:rgba(255,255,255,.09);
+  margin-bottom:18px;
+}
+.library-art-card .art-icon svg{width:17px;height:17px}
+.library-art-card b{display:block;font-size:12px}
+.library-art-card span{display:block;color:#95b0c7;font-size:10px;margin-top:4px}
+.auth-form-side{
+  padding:54px 64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+}
+.auth-form-card{width:100%;max-width:430px}
+.auth-form-head{margin-bottom:30px}
+.auth-form-eyebrow{
+  color:#2563eb;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.15px;
+  text-transform:uppercase;
+}
+.auth-form-head h2{
+  margin:9px 0 8px;
+  font-size:34px;
+  line-height:1.1;
+  letter-spacing:-.75px;
+  color:#101828;
+}
+.auth-form-head p{
+  margin:0;
+  color:#7a889b;
+  line-height:1.65;
+  font-size:13px;
+}
+.auth-form-card label{
+  margin-bottom:7px;
+  color:#344054;
+  font-size:12px;
+  font-weight:700;
+}
+.auth-input-wrap{
+  position:relative;
+  margin-bottom:18px;
+}
+.auth-input-wrap .field-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#94a3b8;
+  pointer-events:none;
+}
+.auth-input-wrap .field-icon svg{width:17px;height:17px}
+.auth-input-wrap input{
+  margin:0;
+  height:48px;
+  border-radius:12px;
+  padding:0 46px 0 43px;
+  border:1px solid #d9e2ec;
+  background:#fff;
+  font-size:13px;
+  transition:.18s ease;
+}
+.auth-input-wrap input:focus{
+  border-color:#5b8def;
+  box-shadow:0 0 0 4px rgba(37,99,235,.10);
+}
+.password-toggle{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  color:#64748b;
+  padding:7px 8px;
+  margin:0;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:700;
+}
+.password-toggle:hover{
+  transform:translateY(-50%);
+  background:#f1f5f9;
+  filter:none;
+}
+.auth-submit{
+  width:100%;
+  height:48px;
+  border-radius:12px;
+  margin:4px 0 0;
+  background:linear-gradient(135deg,#235ee7,#1f52ce);
+  box-shadow:0 12px 22px rgba(37,99,235,.20);
+  font-size:13px;
+}
+.auth-footnote{
+  display:flex;
+  gap:9px;
+  align-items:flex-start;
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid #edf1f5;
+  color:#7b8798;
+  font-size:11px;
+  line-height:1.55;
+}
+.auth-footnote svg{width:16px;height:16px;flex:0 0 16px;margin-top:1px;color:#2563eb}
+.auth-security{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:26px;
+  color:#98a2b3;
+  font-size:10px;
+}
+.auth-security .secure-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 8px;border-radius:999px;
+  background:#f4f7fb;color:#64748b;
+}
+.auth-security svg{width:13px;height:13px}
+@media(max-width:900px){
+  .auth-page{padding:18px}
+  .auth-shell{grid-template-columns:1fr;min-height:auto;border-radius:24px}
+  .auth-brand{padding:34px;min-height:320px}
+  .auth-brand-copy{margin:28px 0 0}
+  .auth-brand-copy h1{font-size:34px}
+  .library-art{display:none}
+  .auth-form-side{padding:40px 28px}
+}
+@media(max-width:560px){
+  .auth-page{padding:0;background:#fff}
+  .auth-shell{border:0;border-radius:0;box-shadow:none}
+  .auth-brand{display:none}
+  .auth-form-side{min-height:100vh;padding:32px 22px}
+  .auth-form-head h2{font-size:30px}
+}
+
 """
 
 def make_password(password, salt=None):
@@ -735,40 +984,93 @@ def page(title,body,user=None):
 
 def login_view(error=""):
     err=f"<div class='alert'><span class='error'>{esc(error)}</span></div>" if error else ""
-    return f"""<div class='login-wrap'>
-  <section class='login-visual'>
-    <div class='login-logo'>{icon("book")}</div>
-    <div class='hero-badge'>Academic Library Platform</div>
-    <h1>Library Management<br>System</h1>
-    <p>Manage books, members, circulation, availability, and overdue loans through one modern workspace built for a public library.</p>
-    <div class='feature-list'>
-      <div class='feature-item'>✓ Secure role-based access</div>
-      <div class='feature-item'>✓ Smart book search</div>
-      <div class='feature-item'>✓ Borrowing & returns</div>
-      <div class='feature-item'>✓ Member self-service</div>
-    </div>
-  </section>
-  <section class='login-panel'>
-    <div class='login-card'>
-      <div class='eyebrow'>Library LMS · 2026</div>
-      <h2>Welcome back</h2>
-      <p class='intro'>Sign in with your library account to continue.</p>
-      {err}
-      <form method='post' action='/login'>
-        <label>Username</label>
-        <input name='username' autocomplete='username' placeholder='Enter your username' required>
-        <label>Password</label>
-        <input type='password' name='password' autocomplete='current-password' placeholder='Enter your password' required>
-        <button>Sign in securely →</button>
-      </form>
-      <div class='demo-accounts'>
-        <div class='demo-account'><b>Administrator</b><code>admin · Admin@12345</code></div>
-        <div class='demo-account'><b>Librarian</b><code>librarian · Lib@12345</code></div>
-        <div class='demo-account'><b>Member</b><code>member · Member@12345</code></div>
+    user_icon="<svg class='icon' viewBox='0 0 24 24'><circle cx='12' cy='8' r='4'/><path d='M4 21a8 8 0 0 1 16 0'/></svg>"
+    lock_icon="<svg class='icon' viewBox='0 0 24 24'><rect x='5' y='10' width='14' height='10' rx='2'/><path d='M8 10V7a4 4 0 0 1 8 0v3'/></svg>"
+    shield_icon="<svg class='icon' viewBox='0 0 24 24'><path d='M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z'/><path d='m9 12 2 2 4-4'/></svg>"
+    eye_icon="<svg class='icon' viewBox='0 0 24 24'><path d='M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z'/><circle cx='12' cy='12' r='2.5'/></svg>"
+    return f"""<div class='auth-page'>
+  <div class='auth-shell'>
+    <section class='auth-brand'>
+      <div class='auth-brand-top'>
+        <div class='auth-brand-logo'>{icon("book")}</div>
+        <div>
+          <div class='auth-brand-name'>Library LMS</div>
+          <div class='auth-brand-sub'>Public Library Management</div>
+        </div>
       </div>
-    </div>
-  </section>
-</div>"""
+
+      <div class='auth-brand-copy'>
+        <div class='auth-kicker'>LMS · Academic Project 2026</div>
+        <h1>One place for your<br>library operations.</h1>
+        <p>Manage books, members, circulation, availability, and overdue loans through a focused professional workspace.</p>
+
+        <div class='library-art'>
+          <div class='library-art-card'>
+            <div class='art-icon'>{icon("book")}</div>
+            <b>Collection</b>
+            <span>Books & categories</span>
+          </div>
+          <div class='library-art-card'>
+            <div class='art-icon'>{icon("users")}</div>
+            <b>Members</b>
+            <span>Profiles & activity</span>
+          </div>
+          <div class='library-art-card'>
+            <div class='art-icon'>{icon("swap")}</div>
+            <b>Circulation</b>
+            <span>Borrow & return</span>
+          </div>
+        </div>
+      </div>
+
+      <div class='auth-security'>
+        <span>Library Management System</span>
+        <span class='secure-pill'>{shield_icon} Protected access</span>
+      </div>
+    </section>
+
+    <section class='auth-form-side'>
+      <div class='auth-form-card'>
+        <div class='auth-form-head'>
+          <div class='auth-form-eyebrow'>Secure access</div>
+          <h2>Welcome back</h2>
+          <p>Enter your assigned library account credentials to continue.</p>
+        </div>
+
+        {err}
+
+        <form method='post' action='/login'>
+          <label>Username</label>
+          <div class='auth-input-wrap'>
+            <span class='field-icon'>{user_icon}</span>
+            <input name='username' autocomplete='username' placeholder='Enter your username' required>
+          </div>
+
+          <label>Password</label>
+          <div class='auth-input-wrap'>
+            <span class='field-icon'>{lock_icon}</span>
+            <input id='login-password' type='password' name='password' autocomplete='current-password' placeholder='Enter your password' required>
+            <button class='password-toggle' type='button' onclick="togglePassword(this)">{eye_icon}</button>
+          </div>
+
+          <button class='auth-submit' type='submit'>Sign in</button>
+        </form>
+
+        <div class='auth-footnote'>
+          {shield_icon}
+          <span>Credentials are not displayed on this page. Use the account assigned by the library administrator.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+function togglePassword(btn){{
+  const input=document.getElementById('login-password');
+  input.type=input.type==='password'?'text':'password';
+  btn.setAttribute('aria-label',input.type==='password'?'Show password':'Hide password');
+}}
+</script>"""
 
 def fv(d,k,default=""):
     return d.get(k,[default])[0]
@@ -1121,7 +1423,7 @@ def main():
         return
     LMSHandler.db=db
     print(f"LMS running at http://{args.host}:{args.port}")
-    print("Demo accounts: admin/Admin@12345, librarian/Lib@12345, member/Member@12345")
+    print("Demo accounts are seeded for Admin, Librarian, and Member roles.")
     ThreadingHTTPServer((args.host,args.port),LMSHandler).serve_forever()
 
 if __name__=="__main__":
