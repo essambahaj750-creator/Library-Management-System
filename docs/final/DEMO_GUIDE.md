@@ -13,15 +13,9 @@ Open:
 
 `http://127.0.0.1:8080`
 
-## Demo Accounts
+## Demo Access
 
-| Role | Username | Password |
-|---|---|---|
-| Admin | admin | Admin@12345 |
-| Librarian | librarian | Lib@12345 |
-| Member | member | Member@12345 |
-
-These are demonstration credentials only.
+Use the assigned demonstration accounts during the presentation. Credentials are intentionally not printed in the public guide or displayed on the login screen.
 
 ## Suggested Live Demo Order
 
