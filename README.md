@@ -63,11 +63,24 @@ Library-Management-System/
 - Phase 2.2: Project Backlog — Completed
 - Phase 2.3: Trello Board — Completed
 - Phase 2.4: Requirements-to-Tasks Mapping — Completed
+- Phase 2.5: GitHub ↔ Trello Linking — Completed
 - Phase 3: System Analysis Diagrams — Not Started
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
 - Phase 6: Testing & Review — Not Started
 - Phase 7: Final Documentation & Submission — Not Started
+
+## Project Tracking
+
+- GitHub Issues: source of requirement/work-item references.
+- Trello Board: source of execution status.
+- Trello Board: https://trello.com/b/rqznByBM/library-management-system
+- Every Trello User Story links to its GitHub Issue.
+- Every GitHub User Story links back to its Trello Card.
+
+Integration workflow document:
+
+`docs/project-management/GITHUB_TRELLO_WORKFLOW.md`
 
 ## Out of Scope
 
