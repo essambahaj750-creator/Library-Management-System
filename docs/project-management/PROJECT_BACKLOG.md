@@ -164,3 +164,16 @@ US-17 → US-18 → US-19 → US-20 → US-21 → US-22
 - أي وظيفة جديدة خارج SRS لا تضاف مباشرة؛ يجب مراجعة أثرها على Scope وTraceability.
 - لا يتم إغلاق Epic حتى تكتمل جميع User Stories المرتبطة به.
 - يتم تحديث حالة Tasks من داخل User Story المعنية.
+
+
+---
+
+## 9. Trello Execution Mapping
+
+The approved backlog has been transferred to Trello for execution tracking.
+
+- Board: https://trello.com/b/rqznByBM/library-management-system
+- 22 User Stories are represented as Trello cards.
+- 97 executable Tasks are represented as Trello checklist items.
+- GitHub Issue links are embedded in Trello card descriptions.
+- The first execution wave (US-01 to US-03) is placed in To Do.
