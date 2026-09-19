@@ -82,7 +82,8 @@ Library-Management-System/
 - Phase 2: Project Management & Repository Setup — Completed
 - Phase 3: System Analysis Diagrams — Completed
 - Phase 4: Logical Data Design & Data Dictionary — Completed
-- Phase 5: Implementation — Next
+- Phase 5: Implementation — Completed
+- Phase 6: Testing & Review — Next
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
 - Phase 6: Testing & Review — Not Started
@@ -121,3 +122,19 @@ Phase 4 data-design artifacts are available under:
 `docs/data-design/`
 
 They include the logical data model, detailed Data Dictionary, an editable Draw.io ERD, and the Phase 4 closure review.
+
+
+## Reference Implementation
+
+A runnable academic implementation is available under:
+
+`src/app.py`
+
+Run with Python 3:
+
+```bash
+cd src
+python app.py
+```
+
+Automated tests are located under `tests/`.
