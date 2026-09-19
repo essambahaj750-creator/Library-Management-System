@@ -20,7 +20,9 @@
 - 22 User Stories created in Trello.
 - 97 executable checklist Tasks created across the 22 stories.
 - Every User Story contains its related FR/NFR identifiers in the description.
-- Every User Story links to its corresponding GitHub Issue.
+- Every Trello User Story links to its corresponding GitHub Issue.
+- Every GitHub User Story links back to its corresponding Trello Card.
+- All 7 GitHub Epics link to the Trello Board.
 - US-01, US-02, and US-03 are currently placed in To Do as the first execution wave.
 - US-04 through US-22 remain in Project Backlog until their dependencies or priority make them ready.
 
@@ -28,6 +30,12 @@
 
 The active traceability path for Phase 2 is:
 
-SRS Requirement → GitHub Epic → GitHub User Story → Trello User Story Card → Trello Tasks → Acceptance Criteria
+SRS Requirement → GitHub Epic → GitHub User Story ↔ Trello User Story Card → Trello Tasks → Acceptance Criteria
 
 This mapping keeps the project-management artifacts aligned with the approved SRS baseline.
+
+## Status Ownership
+
+- GitHub: requirement references, Epics, User Stories, implementation discussion, commits, pull requests.
+- Trello: day-to-day execution state and task checklist progress.
+- A User Story is not considered complete until its Trello card reaches Done and its Acceptance Criteria are satisfied.
