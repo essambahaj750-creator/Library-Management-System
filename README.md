@@ -64,6 +64,8 @@ Library-Management-System/
 - Phase 2.3: Trello Board — Completed
 - Phase 2.4: Requirements-to-Tasks Mapping — Completed
 - Phase 2.5: GitHub ↔ Trello Linking — Completed
+- Phase 2.6: Git Workflow & Branching Strategy — Completed
+- Phase 2.7: Project Timeline — Not Started
 - Phase 3: System Analysis Diagrams — Not Started
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
