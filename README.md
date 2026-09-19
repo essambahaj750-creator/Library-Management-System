@@ -29,13 +29,29 @@ Phase 1 — Software Requirements Specification (SRS) has been completed and app
 - 34 functional requirements (FR-01 to FR-34)
 - 16 non-functional requirements (NFR-01 to NFR-16)
 
+## Project Backlog
+
+Phase 2.2 — Project Backlog has been structured and linked to the approved requirements.
+
+- 7 Epics
+- 22 User Stories
+- 97 executable Tasks
+- Functional and non-functional requirements mapped to GitHub Issues
+- Definition of Ready (DoR) and Definition of Done (DoD) documented
+
+Backlog document:
+
+`docs/project-management/PROJECT_BACKLOG.md`
+
 ## Repository Structure
 
 ```text
 Library-Management-System/
 ├── README.md
 ├── docs/
-│   └── SRS/
+│   ├── SRS/
+│   └── project-management/
+│       └── PROJECT_BACKLOG.md
 ├── src/
 └── tests/
 ```
@@ -43,7 +59,9 @@ Library-Management-System/
 ## Project Status
 
 - Phase 1: Requirements Analysis — Completed
-- Phase 2: Project Management & Repository Setup — In Progress
+- Phase 2.1: GitHub Repository Setup — Completed
+- Phase 2.2: Project Backlog — Completed
+- Phase 2.3: Trello Board — Not Started
 - Phase 3: System Analysis Diagrams — Not Started
 - Phase 4: Logical Data Design & Data Dictionary — Not Started
 - Phase 5: Implementation — Not Started
