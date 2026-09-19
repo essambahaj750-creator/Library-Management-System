@@ -22,14 +22,6 @@ Open:
 
 `http://127.0.0.1:8080`
 
-## Demo Accounts
-
-- Admin: `admin / Admin@12345`
-- Librarian: `librarian / Lib@12345`
-- Member: `member / Member@12345`
-
-These credentials are for academic demonstration only.
-
 ## Implemented Features
 
 - Login/logout
@@ -63,4 +55,4 @@ python app.py --restore data/backups/lms_backup_YYYYMMDD_HHMMSS.db
 
 ## Security Note
 
-Passwords are hashed and salted. The implementation is an academic reference build, not a claim of production hardening.
+Passwords are hashed and salted. Login credentials are intentionally not displayed in the application UI or documentation. The implementation is an academic reference build, not a claim of production hardening.
