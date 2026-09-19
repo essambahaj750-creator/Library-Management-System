@@ -315,6 +315,135 @@ form.inline{display:inline}
   th,td{font-size:11px;padding:9px 8px}
   .login-panel{padding:28px 20px}
 }
+
+/* Premium refinement */
+:root{
+  --purple:#7c3aed;
+  --soft-blue:#f4f8ff;
+  --soft-purple:#f7f3ff;
+}
+svg.icon{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;display:block}
+.brand-mark svg{width:27px;height:27px;stroke:white}
+.nav-icon{display:grid;place-items:center}
+.nav-icon svg{width:18px;height:18px}
+.topbar{
+  box-shadow:0 1px 0 rgba(15,23,42,.02);
+}
+.topbar-left{display:flex;align-items:center;gap:14px}
+.topbar-title small{display:block;margin-top:3px;color:#94a3b8;font-size:11px;font-weight:500}
+.topbar-search{
+  min-width:290px;max-width:380px;width:34vw;
+  display:flex;align-items:center;gap:9px;
+  background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;
+  padding:7px 10px;
+}
+.topbar-search input{
+  border:0;box-shadow:none;margin:0;padding:4px 2px;background:transparent;font-size:13px;
+}
+.topbar-search input:focus{box-shadow:none}
+.topbar-search button{
+  margin:0;padding:6px 9px;border-radius:8px;box-shadow:none;font-size:12px;
+}
+.section-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.75fr);gap:20px}
+.activity-list{display:flex;flex-direction:column;gap:10px}
+.activity-item{
+  display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;
+  padding:12px;border:1px solid #eef2f7;border-radius:14px;background:#fff;
+}
+.activity-dot{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:#eff6ff;color:#2563eb;
+}
+.activity-dot svg{width:18px;height:18px}
+.activity-title{font-weight:700;font-size:13px;color:#1e293b}
+.activity-sub{font-size:11px;color:#94a3b8;margin-top:3px}
+.activity-time{font-size:11px;color:#94a3b8;white-space:nowrap}
+.insight-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#111c2d,#173b5e);
+  color:white;border:0;
+}
+.insight-card:after{
+  content:"";position:absolute;right:-60px;bottom:-80px;width:190px;height:190px;
+  border-radius:50%;background:rgba(59,130,246,.18);
+}
+.insight-card h3{color:white;position:relative;z-index:1}
+.insight-card p{color:#c8d9e8;line-height:1.6;position:relative;z-index:1}
+.insight-mini{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px 0;border-bottom:1px solid rgba(255,255,255,.09);position:relative;z-index:1;
+}
+.insight-mini:last-child{border-bottom:0}
+.insight-mini span{color:#b9cce0;font-size:12px}
+.insight-mini strong{font-size:13px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.form-grid .full{grid-column:1/-1}
+.data-card{padding:0;overflow:hidden}
+.data-card .card-head{padding:20px 20px 0}
+.data-card .table-wrap{overflow-x:auto;padding:0 20px 20px}
+.table-wrap table{min-width:720px}
+.profile-grid{display:grid;grid-template-columns:220px 1fr;gap:20px}
+.profile-card{
+  background:linear-gradient(160deg,#f8fbff,#eef5ff);
+  border:1px solid #dbeafe;border-radius:18px;padding:22px;text-align:center;
+}
+.avatar{
+  width:82px;height:82px;margin:0 auto 14px;border-radius:24px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;
+  font-size:29px;font-weight:800;box-shadow:0 14px 30px rgba(37,99,235,.22);
+}
+.profile-name{font-size:18px;font-weight:800;color:#0f172a}
+.profile-role{font-size:12px;color:#64748b;margin-top:4px}
+.profile-details{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.detail-box{
+  background:#fff;border:1px solid #e7edf5;border-radius:14px;padding:14px;
+}
+.detail-label{font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:.4px}
+.detail-value{font-size:14px;font-weight:700;color:#1e293b;margin-top:5px}
+.kpi-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;
+}
+.kpi{
+  padding:13px;border-radius:14px;background:#fff;border:1px solid #e7edf5;
+}
+.kpi strong{display:block;font-size:20px;color:#0f172a}
+.kpi span{font-size:11px;color:#94a3b8}
+.login-visual{
+  background:
+    radial-gradient(circle at 72% 20%,rgba(96,165,250,.24),transparent 28%),
+    radial-gradient(circle at 18% 82%,rgba(124,58,237,.18),transparent 25%),
+    linear-gradient(145deg,#071723 0%,#0b2942 45%,#164e73 72%,#2563eb 100%);
+}
+.login-card{
+  padding:10px;
+}
+.demo-accounts{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}
+.demo-account{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 11px;border:1px solid #e2e8f0;border-radius:11px;background:#f8fafc;
+}
+.demo-account b{font-size:12px;color:#334155}
+.demo-account code{font-size:11px;color:#64748b}
+.soft-chip{
+  display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;
+  background:#f1f5f9;color:#475569;font-size:11px;font-weight:700;
+}
+.member-hero{
+  background:
+    radial-gradient(circle at 85% 30%,rgba(255,255,255,.16),transparent 20%),
+    linear-gradient(135deg,#312e81,#4338ca 50%,#2563eb);
+}
+.member-hero .hero-badge{background:rgba(255,255,255,.15)}
+@media(max-width:1100px){
+  .section-grid{grid-template-columns:1fr}
+  .topbar-search{display:none}
+}
+@media(max-width:760px){
+  .form-grid,.profile-grid,.profile-details,.kpi-strip{grid-template-columns:1fr}
+  .profile-grid{display:block}
+  .profile-card{margin-bottom:16px}
+}
 """
 
 def make_password(password, salt=None):
@@ -521,21 +650,39 @@ SESSIONS_LOCK=threading.Lock()
 def esc(x):
     return html.escape(str(x) if x is not None else "")
 
+ICONS={
+    "dashboard":"<svg class='icon' viewBox='0 0 24 24'><rect x='3' y='3' width='7' height='7' rx='2'/><rect x='14' y='3' width='7' height='7' rx='2'/><rect x='3' y='14' width='7' height='7' rx='2'/><rect x='14' y='14' width='7' height='7' rx='2'/></svg>",
+    "book":"<svg class='icon' viewBox='0 0 24 24'><path d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/><path d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/></svg>",
+    "tag":"<svg class='icon' viewBox='0 0 24 24'><path d='M20 12l-8 8-9-9V4h7z'/><circle cx='7.5' cy='8.5' r='1.5'/></svg>",
+    "users":"<svg class='icon' viewBox='0 0 24 24'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>",
+    "swap":"<svg class='icon' viewBox='0 0 24 24'><path d='M7 7h11l-3-3'/><path d='M17 17H6l3 3'/></svg>",
+    "plus":"<svg class='icon' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 8v8M8 12h8'/></svg>",
+    "alert":"<svg class='icon' viewBox='0 0 24 24'><path d='M10.3 3.7 2.5 17.2A2 2 0 0 0 4.2 20h15.6a2 2 0 0 0 1.7-2.8L13.7 3.7a2 2 0 0 0-3.4 0z'/><path d='M12 9v4M12 17h.01'/></svg>",
+    "profile":"<svg class='icon' viewBox='0 0 24 24'><circle cx='12' cy='8' r='4'/><path d='M4 21a8 8 0 0 1 16 0'/></svg>",
+    "settings":"<svg class='icon' viewBox='0 0 24 24'><circle cx='12' cy='12' r='3'/><path d='M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9A1.7 1.7 0 0 0 21 10h.2v4H21a1.7 1.7 0 0 0-1.6 1z'/></svg>",
+    "logout":"<svg class='icon' viewBox='0 0 24 24'><path d='M10 17l5-5-5-5'/><path d='M15 12H3'/><path d='M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4'/></svg>",
+    "search":"<svg class='icon' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-3.5-3.5'/></svg>",
+    "clock":"<svg class='icon' viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M12 7v5l3 2'/></svg>"
+}
+
+def icon(name):
+    return ICONS.get(name,"")
+
 def nav(user):
     if not user:
         return ""
-    links=[("⌂","Dashboard","/dashboard"),("▣","Books","/books")]
+    links=[("dashboard","Dashboard","/dashboard"),("book","Books","/books")]
     if user["role"]=="Member":
-        links += [("◉","My Profile","/my/profile"),("▤","My Loans","/my/loans")]
+        links += [("profile","My Profile","/my/profile"),("clock","My Loans","/my/loans")]
     if user["role"] in ("Admin","Librarian"):
-        links += [("◇","Categories","/categories"),("♙","Members","/members"),("⇄","Loans","/loans"),("＋","Borrow","/borrow"),("!","Overdue","/overdue")]
+        links += [("tag","Categories","/categories"),("users","Members","/members"),("swap","Loans","/loans"),("plus","Borrow","/borrow"),("alert","Overdue","/overdue")]
     if user["role"]=="Admin":
-        links += [("⚙","Users","/users")]
-    links += [("↪","Logout","/logout")]
+        links += [("settings","Users","/users")]
+    links += [("logout","Logout","/logout")]
     out=[]
-    for icon,label,url in links:
+    for icon_name,label,url in links:
         cls="logout" if url=="/logout" else ""
-        out.append(f'<a class="{cls}" href="{url}"><span class="nav-icon">{icon}</span><span class="nav-text">{esc(label)}</span></a>')
+        out.append(f'<a class="{cls}" href="{url}"><span class="nav-icon">{icon(icon_name)}</span><span class="nav-text">{esc(label)}</span></a>')
     return "".join(out)
 
 def page(title,body,user=None):
@@ -554,7 +701,7 @@ def page(title,body,user=None):
 <div class='app-shell'>
   <aside class='sidebar'>
     <div class='brand'>
-      <div class='brand-mark'>📚</div>
+      <div class='brand-mark'>{icon("book")}</div>
       <div>
         <div class='brand-title'>Library LMS</div>
         <div class='brand-sub'>MANAGEMENT SYSTEM</div>
@@ -569,7 +716,14 @@ def page(title,body,user=None):
   </aside>
   <section class='workspace'>
     <header class='topbar'>
-      <h1>{esc(title)}</h1>
+      <div class='topbar-left'>
+        <div class='topbar-title'><h1>{esc(title)}</h1><small>Library Management Workspace</small></div>
+      </div>
+      <form class='topbar-search' method='get' action='/books'>
+        {icon("search")}
+        <input name='q' placeholder='Search books, authors, categories'>
+        <button>Search</button>
+      </form>
       <div class='topbar-meta'>Signed in as <b>{who}</b></div>
     </header>
     <main>{body}</main>
@@ -583,33 +737,39 @@ def login_view(error=""):
     err=f"<div class='alert'><span class='error'>{esc(error)}</span></div>" if error else ""
     return f"""<div class='login-wrap'>
   <section class='login-visual'>
-    <div class='login-logo'>📚</div>
-    <h1>Library Management System</h1>
-    <p>A clean academic library platform for books, members, borrowing, returns, availability, and overdue-loan monitoring.</p>
+    <div class='login-logo'>{icon("book")}</div>
+    <div class='hero-badge'>Academic Library Platform</div>
+    <h1>Library Management<br>System</h1>
+    <p>Manage books, members, circulation, availability, and overdue loans through one modern workspace built for a public library.</p>
     <div class='feature-list'>
-      <div class='feature-item'>✓ Role-based access</div>
-      <div class='feature-item'>✓ Book & category management</div>
+      <div class='feature-item'>✓ Secure role-based access</div>
+      <div class='feature-item'>✓ Smart book search</div>
       <div class='feature-item'>✓ Borrowing & returns</div>
       <div class='feature-item'>✓ Member self-service</div>
     </div>
   </section>
   <section class='login-panel'>
     <div class='login-card'>
-      <div class='eyebrow'>Welcome back</div>
-      <h2>Sign in</h2>
-      <p class='intro'>Enter your account details to access the library dashboard.</p>
+      <div class='eyebrow'>Library LMS · 2026</div>
+      <h2>Welcome back</h2>
+      <p class='intro'>Sign in with your library account to continue.</p>
       {err}
       <form method='post' action='/login'>
         <label>Username</label>
-        <input name='username' autocomplete='username' placeholder='Enter username' required>
+        <input name='username' autocomplete='username' placeholder='Enter your username' required>
         <label>Password</label>
-        <input type='password' name='password' autocomplete='current-password' placeholder='Enter password' required>
-        <button>Sign in →</button>
+        <input type='password' name='password' autocomplete='current-password' placeholder='Enter your password' required>
+        <button>Sign in securely →</button>
       </form>
-      <div class='demo-box'><b>Demo Admin</b><br>Username: admin<br>Password: Admin@12345</div>
+      <div class='demo-accounts'>
+        <div class='demo-account'><b>Administrator</b><code>admin · Admin@12345</code></div>
+        <div class='demo-account'><b>Librarian</b><code>librarian · Lib@12345</code></div>
+        <div class='demo-account'><b>Member</b><code>member · Member@12345</code></div>
+      </div>
     </div>
   </section>
 </div>"""
+
 def fv(d,k,default=""):
     return d.get(k,[default])[0]
 
@@ -679,26 +839,82 @@ class LMSHandler(BaseHTTPRequestHandler):
             u=self.require()
             if not u:
                 return
-            c=self.db.counts()
-            body=f"""
-<div class='hero'>
-  <div class='hero-badge'>● System operational</div>
-  <h2>Welcome to the Library Dashboard</h2>
-  <p>Monitor the collection, members, circulation activity, and overdue loans from one clean workspace.</p>
+            if u["role"]=="Member":
+                m=self.db.member_for_user(u["id"])
+                rows=self.db.loans(m["id"] if m else -1)
+                open_loans=[r for r in rows if r["return_date"] is None]
+                overdue_loans=[r for r in open_loans if r["overdue"]]
+                member_name=m["full_name"] if m else u["username"]
+                status=m["status"] if m else "Not linked"
+                body=f"""
+<div class='hero member-hero'>
+  <div class='hero-badge'>Member portal</div>
+  <h2>Hello, {esc(member_name)}</h2>
+  <p>Search the library collection and keep track of your current and previous loans.</p>
 </div>
 <div class='stats-grid'>
-  <div class='stat-card'><div><div class='metric'>{c['books']}</div><div class='metric-label'>Books</div></div><div class='stat-icon'>▣</div></div>
-  <div class='stat-card cyan'><div><div class='metric'>{c['members']}</div><div class='metric-label'>Members</div></div><div class='stat-icon'>♙</div></div>
-  <div class='stat-card success'><div><div class='metric'>{c['open']}</div><div class='metric-label'>Open loans</div></div><div class='stat-icon'>⇄</div></div>
-  <div class='stat-card danger'><div><div class='metric'>{c['overdue']}</div><div class='metric-label'>Overdue loans</div></div><div class='stat-icon'>!</div></div>
+  <div class='stat-card'><div><div class='metric'>{len(rows)}</div><div class='metric-label'>Total loans</div></div><div class='stat-icon'>{icon("book")}</div></div>
+  <div class='stat-card success'><div><div class='metric'>{len(open_loans)}</div><div class='metric-label'>Current loans</div></div><div class='stat-icon'>{icon("clock")}</div></div>
+  <div class='stat-card danger'><div><div class='metric'>{len(overdue_loans)}</div><div class='metric-label'>Overdue</div></div><div class='stat-icon'>{icon("alert")}</div></div>
+  <div class='stat-card cyan'><div><div class='metric'>{esc(status)}</div><div class='metric-label'>Membership status</div></div><div class='stat-icon'>{icon("profile")}</div></div>
 </div>
-<div class='card'>
-  <div class='card-head'>
-    <div><h3 style='margin-bottom:5px'>Quick actions</h3><div class='small'>Common library operations</div></div>
+<div class='section-grid'>
+  <div class='card'>
+    <div class='card-head'><div><h3 style='margin-bottom:5px'>My current loans</h3><div class='small'>Books currently checked out to your account</div></div><a class='btn secondary' href='/my/loans'>View all</a></div>
+    <div class='activity-list'>
+      {("".join(f"<div class='activity-item'><div class='activity-dot'>{icon('book')}</div><div><div class='activity-title'>{esc(r['book'])}</div><div class='activity-sub'>Due {esc(r['due_date'])}</div></div><span class='soft-chip'>{'Overdue' if r['overdue'] else 'Open'}</span></div>" for r in open_loans[:5]) if open_loans else "<div class='empty'>You do not have any current loans.</div>")}
+    </div>
   </div>
-  <div class='quick-actions'>
-    <a class='btn' href='/books'>▣ Browse books</a>
-    {("<a class='btn' href='/borrow'>＋ Register borrowing</a><a class='btn secondary' href='/members'>♙ Members</a><a class='btn secondary' href='/loans'>⇄ Current loans</a>" if u['role'] in ('Admin','Librarian') else "<a class='btn secondary' href='/my/loans'>▤ My loans</a>")}
+  <div class='card insight-card'>
+    <h3>Member shortcuts</h3>
+    <p>Everything you need for your personal library activity.</p>
+    <div class='quick-actions'>
+      <a class='btn' href='/books'>{icon("search")} Search books</a>
+      <a class='btn secondary' href='/my/profile'>{icon("profile")} My profile</a>
+      <a class='btn secondary' href='/my/loans'>{icon("clock")} My loans</a>
+    </div>
+  </div>
+</div>"""
+            else:
+                c=self.db.counts()
+                recent=self.db.loans()[:5]
+                role_text="Full administration and library oversight" if u["role"]=="Admin" else "Daily circulation and collection operations"
+                body=f"""
+<div class='hero'>
+  <div class='hero-badge'>● System operational</div>
+  <h2>Good to see you, {esc(u["username"])}</h2>
+  <p>{role_text}. Monitor the most important library activity from one professional dashboard.</p>
+</div>
+<div class='stats-grid'>
+  <div class='stat-card'><div><div class='metric'>{c['books']}</div><div class='metric-label'>Books</div></div><div class='stat-icon'>{icon("book")}</div></div>
+  <div class='stat-card cyan'><div><div class='metric'>{c['members']}</div><div class='metric-label'>Members</div></div><div class='stat-icon'>{icon("users")}</div></div>
+  <div class='stat-card success'><div><div class='metric'>{c['open']}</div><div class='metric-label'>Open loans</div></div><div class='stat-icon'>{icon("swap")}</div></div>
+  <div class='stat-card danger'><div><div class='metric'>{c['overdue']}</div><div class='metric-label'>Overdue loans</div></div><div class='stat-icon'>{icon("alert")}</div></div>
+</div>
+<div class='section-grid'>
+  <div class='card'>
+    <div class='card-head'>
+      <div><h3 style='margin-bottom:5px'>Recent circulation</h3><div class='small'>Latest borrowing activity in the library</div></div>
+      <a class='btn secondary' href='/loans'>View loans</a>
+    </div>
+    <div class='activity-list'>
+      {("".join(f"<div class='activity-item'><div class='activity-dot'>{icon('swap')}</div><div><div class='activity-title'>{esc(r['book'])}</div><div class='activity-sub'>{esc(r['member'])} · Due {esc(r['due_date'])}</div></div><span class='soft-chip'>{'Returned' if r['return_date'] else ('Overdue' if r['overdue'] else 'Open')}</span></div>" for r in recent) if recent else "<div class='empty'>No circulation activity yet.</div>")}
+    </div>
+  </div>
+  <div class='card insight-card'>
+    <h3>Quick operations</h3>
+    <p>Start the most common library tasks without leaving the dashboard.</p>
+    <div class='quick-actions'>
+      <a class='btn' href='/borrow'>{icon("plus")} Borrow book</a>
+      <a class='btn secondary' href='/books'>{icon("book")} Books</a>
+      <a class='btn secondary' href='/members'>{icon("users")} Members</a>
+      <a class='btn secondary' href='/overdue'>{icon("alert")} Overdue</a>
+    </div>
+    <div style='margin-top:18px'>
+      <div class='insight-mini'><span>Collection status</span><strong>{c['books']} titles</strong></div>
+      <div class='insight-mini'><span>Active circulation</span><strong>{c['open']} open</strong></div>
+      <div class='insight-mini'><span>Needs attention</span><strong>{c['overdue']} overdue</strong></div>
+    </div>
   </div>
 </div>"""
             return self.send_html(page("Dashboard",body,u))
@@ -791,7 +1007,24 @@ class LMSHandler(BaseHTTPRequestHandler):
             if not u:
                 return
             m=self.db.member_for_user(u['id'])
-            body=f"<h2>My Profile</h2><div class='card'><p><b>Name:</b> {esc(m['full_name'] if m else '')}</p><p><b>Phone:</b> {esc(m['phone'] if m else '')}</p><p><b>Status:</b> {esc(m['status'] if m else '')}</p></div>"
+            initials=((m['full_name'] if m else u['username'])[:1] or "M").upper()
+            body=f"""<div class='page-head'><div><h2>My Profile</h2><p>Your personal library membership information</p></div></div>
+<div class='profile-grid'>
+  <div class='profile-card'>
+    <div class='avatar'>{esc(initials)}</div>
+    <div class='profile-name'>{esc(m['full_name'] if m else u['username'])}</div>
+    <div class='profile-role'>Library Member</div>
+  </div>
+  <div class='card'>
+    <div class='card-head'><div><h3 style='margin-bottom:5px'>Membership details</h3><div class='small'>Read-only account information</div></div><span class='badge ok'>{esc(m['status'] if m else '')}</span></div>
+    <div class='profile-details'>
+      <div class='detail-box'><div class='detail-label'>Full name</div><div class='detail-value'>{esc(m['full_name'] if m else '')}</div></div>
+      <div class='detail-box'><div class='detail-label'>Phone</div><div class='detail-value'>{esc(m['phone'] if m else '')}</div></div>
+      <div class='detail-box'><div class='detail-label'>Registration date</div><div class='detail-value'>{esc(m['registration_date'] if m else '')}</div></div>
+      <div class='detail-box'><div class='detail-label'>Status</div><div class='detail-value'>{esc(m['status'] if m else '')}</div></div>
+    </div>
+  </div>
+</div>"""
             return self.send_html(page("My Profile",body,u))
         if path=="/my/loans":
             u=self.require(("Member",))
