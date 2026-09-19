@@ -34,8 +34,287 @@ CREATE INDEX IF NOT EXISTS idx_books_author ON books(author);
 """
 
 CSS = r"""
-:root{--blue:#123b5d;--light:#eef5fb;--border:#c7d8e7;--danger:#9b1c1c;--ok:#236b2c}*{box-sizing:border-box}
-body{margin:0;font-family:Segoe UI,Tahoma,Arial,sans-serif;background:#f7f9fb;color:#1f2d3d}header{background:var(--blue);color:white;padding:16px 28px;display:flex;justify-content:space-between;align-items:center}header h1{margin:0;font-size:22px}nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}main{max-width:1180px;margin:26px auto;padding:0 18px 40px}.card{background:white;border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:18px;box-shadow:0 3px 12px rgba(0,0,0,.04)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.metric{font-size:30px;font-weight:700;color:var(--blue)}table{width:100%;border-collapse:collapse;background:white}th,td{border-bottom:1px solid #e7eef4;text-align:left;padding:10px;vertical-align:top}th{background:var(--light);color:var(--blue)}input,select,textarea{width:100%;padding:9px 10px;border:1px solid #b7c9d8;border-radius:7px;margin:4px 0 12px}button,.btn{display:inline-block;background:var(--blue);color:white;border:none;border-radius:7px;padding:9px 14px;cursor:pointer;text-decoration:none;margin:2px}.btn.secondary{background:#667788}.btn.danger{background:var(--danger)}.btn.ok{background:var(--ok)}.alert{padding:12px;border-radius:8px;background:#fff4cc;border:1px solid #ead27a;margin-bottom:14px}.error{color:var(--danger);font-weight:600}.ok{color:var(--ok);font-weight:600}form.inline{display:inline}.small{color:#6a7785;font-size:13px}.login{max-width:430px;margin:80px auto}.badge{border-radius:999px;padding:3px 9px;font-size:12px;background:#e8f2fa;color:var(--blue)}@media(max-width:800px){header{display:block}nav{margin-top:10px}th,td{font-size:12px;padding:7px}}
+:root{
+  --navy:#0b1f33;
+  --navy-2:#102a43;
+  --blue:#2563eb;
+  --blue-2:#3b82f6;
+  --cyan:#06b6d4;
+  --green:#16a34a;
+  --red:#dc2626;
+  --amber:#d97706;
+  --bg:#f4f7fb;
+  --surface:#ffffff;
+  --surface-2:#f8fafc;
+  --text:#172033;
+  --muted:#697386;
+  --border:#e2e8f0;
+  --shadow:0 10px 30px rgba(15,23,42,.07);
+  --shadow-lg:0 22px 60px rgba(15,23,42,.13);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.app-shell{min-height:100vh;display:flex}
+.sidebar{
+  width:270px;
+  position:fixed;
+  inset:0 auto 0 0;
+  background:linear-gradient(180deg,#0b1f33 0%,#102a43 100%);
+  color:#fff;
+  padding:26px 18px 20px;
+  box-shadow:12px 0 40px rgba(15,23,42,.12);
+  z-index:30;
+  overflow-y:auto;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:2px 8px 22px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+  margin-bottom:18px;
+}
+.brand-mark{
+  width:46px;height:46px;border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  box-shadow:0 10px 25px rgba(59,130,246,.28);
+  font-size:24px;
+}
+.brand-title{font-size:17px;font-weight:800;line-height:1.15}
+.brand-sub{font-size:11px;color:#a9bdd0;margin-top:4px;letter-spacing:.4px}
+.user-card{
+  padding:13px 14px;
+  border-radius:14px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.08);
+  margin:0 4px 18px;
+}
+.user-name{font-weight:700;font-size:14px}
+.user-role{font-size:12px;color:#b9cce0;margin-top:3px}
+.side-nav{display:flex;flex-direction:column;gap:5px}
+.side-nav a{
+  display:flex;align-items:center;gap:11px;
+  text-decoration:none;color:#d7e4f0;
+  padding:11px 12px;border-radius:11px;
+  font-size:14px;font-weight:600;
+  transition:.18s ease;
+}
+.side-nav a:hover{
+  background:rgba(59,130,246,.20);
+  color:#fff;
+  transform:translateX(3px);
+}
+.side-nav a.logout{
+  margin-top:12px;
+  color:#fecaca;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-radius:0;
+  padding-top:17px;
+}
+.nav-icon{width:24px;text-align:center;font-size:16px}
+.sidebar-foot{
+  margin:22px 8px 0;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.08);
+  font-size:11px;color:#829bb3;
+}
+.workspace{margin-left:270px;min-width:0;width:calc(100% - 270px)}
+.topbar{
+  height:76px;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 34px;
+  position:sticky;top:0;z-index:20;
+}
+.topbar h1{font-size:20px;margin:0;color:#0f172a}
+.topbar-meta{font-size:12px;color:var(--muted)}
+main{max-width:1320px;margin:0 auto;padding:34px 32px 50px}
+.page-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:22px}
+.page-head h2{margin:0;font-size:28px;letter-spacing:-.4px;color:#0f172a}
+.page-head p{margin:7px 0 0;color:var(--muted)}
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#0f2f4a 0%,#164e73 52%,#2563eb 100%);
+  color:#fff;border-radius:24px;padding:30px 32px;margin-bottom:24px;
+  box-shadow:0 18px 44px rgba(37,99,235,.18);
+}
+.hero:after{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(255,255,255,.08);right:-80px;top:-110px;
+}
+.hero h2{margin:0;font-size:29px;letter-spacing:-.5px}
+.hero p{margin:8px 0 0;color:#d9ecff;max-width:700px;line-height:1.6}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;padding:6px 10px;font-size:12px;margin-bottom:13px;
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:24px}
+.stat-card{
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  padding:19px;box-shadow:var(--shadow);
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.stat-icon{
+  width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+  background:#eff6ff;color:#2563eb;font-size:21px;
+}
+.stat-card.danger .stat-icon{background:#fef2f2;color:#dc2626}
+.stat-card.success .stat-icon{background:#f0fdf4;color:#16a34a}
+.stat-card.cyan .stat-icon{background:#ecfeff;color:#0891b2}
+.metric{font-size:30px;font-weight:800;color:#0f172a;line-height:1}
+.metric-label{font-size:13px;color:var(--muted);margin-top:6px}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px;margin-bottom:20px;box-shadow:var(--shadow);
+}
+.card h2,.card h3{margin-top:0;color:#0f172a}
+.card h3{font-size:17px}
+.card-head{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  margin-bottom:16px;
+}
+.quick-actions{display:flex;gap:10px;flex-wrap:wrap}
+.panel{
+  background:var(--surface-2);border:1px solid var(--border);
+  border-radius:16px;padding:17px;
+}
+table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  background:#fff;border:1px solid var(--border);border-radius:14px;
+  overflow:hidden;
+}
+th,td{
+  border-bottom:1px solid #edf1f5;text-align:left;
+  padding:12px 13px;vertical-align:middle;font-size:13px;
+}
+th{
+  background:#f8fafc;color:#475569;font-size:12px;
+  text-transform:uppercase;letter-spacing:.3px;font-weight:800;
+}
+tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:#f8fbff}
+label{display:block;font-size:13px;font-weight:700;color:#334155;margin-bottom:5px}
+input,select,textarea{
+  width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:11px;
+  margin:3px 0 14px;background:#fff;color:#172033;font-size:14px;
+  transition:border-color .18s,box-shadow .18s;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;border-color:#3b82f6;
+  box-shadow:0 0 0 4px rgba(59,130,246,.12);
+}
+button,.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);color:white;
+  border:0;border-radius:10px;padding:10px 14px;cursor:pointer;
+  text-decoration:none;font-size:13px;font-weight:700;margin:2px;
+  box-shadow:0 7px 16px rgba(37,99,235,.16);
+  transition:.16s ease;
+}
+button:hover,.btn:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.btn.secondary{background:#64748b;box-shadow:none}
+.btn.danger{background:#dc2626;box-shadow:none}
+.btn.ok{background:#16a34a;box-shadow:none}
+.alert{
+  padding:13px 15px;border-radius:12px;background:#fff8e7;
+  border:1px solid #f2d98a;color:#7c5b00;margin-bottom:15px;
+}
+.error{color:var(--red);font-weight:700}
+.ok{color:var(--green);font-weight:700}
+form.inline{display:inline}
+.small{color:var(--muted);font-size:12px}
+.badge{
+  display:inline-flex;align-items:center;border-radius:999px;
+  padding:5px 9px;font-size:11px;font-weight:800;
+  background:#eaf2ff;color:#1d4ed8;
+}
+.badge.ok{background:#ecfdf3;color:#15803d}
+.badge.warn{background:#fff7ed;color:#c2410c}
+.badge.danger{background:#fef2f2;color:#b91c1c}
+.empty{padding:35px;text-align:center;color:var(--muted)}
+.footer{
+  text-align:center;color:#94a3b8;font-size:11px;padding:0 20px 28px;
+}
+.login-wrap{
+  min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;
+  background:#f8fafc;
+}
+.login-visual{
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#071a2b 0%,#0f3655 50%,#2563eb 100%);
+  color:#fff;padding:70px;display:flex;flex-direction:column;justify-content:center;
+}
+.login-visual:before,.login-visual:after{
+  content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.06)
+}
+.login-visual:before{width:360px;height:360px;right:-120px;top:-90px}
+.login-visual:after{width:220px;height:220px;left:-80px;bottom:-70px}
+.login-logo{
+  width:70px;height:70px;border-radius:20px;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;
+  font-size:34px;margin-bottom:22px;box-shadow:0 18px 40px rgba(0,0,0,.16);
+}
+.login-visual h1{font-size:38px;margin:0 0 12px;letter-spacing:-.8px}
+.login-visual p{font-size:16px;line-height:1.75;color:#d5e7f7;max-width:530px}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:26px;max-width:560px}
+.feature-item{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);
+  padding:11px 12px;border-radius:12px;font-size:13px;color:#e7f2fb;
+}
+.login-panel{
+  display:flex;align-items:center;justify-content:center;padding:42px;
+  background:#fff;
+}
+.login-card{width:100%;max-width:430px}
+.login-card .eyebrow{
+  color:#2563eb;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px
+}
+.login-card h2{font-size:31px;margin:8px 0 6px;color:#0f172a}
+.login-card .intro{color:var(--muted);margin:0 0 27px;line-height:1.6}
+.login-card button{width:100%;padding:12px 16px;margin-top:4px}
+.demo-box{
+  margin-top:20px;padding:13px;border:1px dashed #bfdbfe;
+  background:#eff6ff;border-radius:12px;color:#3b4c68;font-size:12px;line-height:1.7;
+}
+@media(max-width:1100px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .sidebar{width:82px;padding:22px 10px}
+  .brand-title,.brand-sub,.user-card,.side-nav .nav-text,.sidebar-foot{display:none}
+  .brand{justify-content:center;padding:0 0 18px}
+  .brand-mark{width:46px;height:46px}
+  .side-nav a{justify-content:center;padding:12px 8px}
+  .nav-icon{font-size:18px}
+  .workspace{margin-left:82px;width:calc(100% - 82px)}
+  .topbar{padding:0 20px}
+  main{padding:25px 18px 40px}
+  .login-wrap{grid-template-columns:1fr}
+  .login-visual{display:none}
+}
+@media(max-width:620px){
+  .stats-grid{grid-template-columns:1fr}
+  .page-head{display:block}
+  .topbar h1{font-size:16px}
+  .topbar-meta{display:none}
+  .card{padding:16px}
+  th,td{font-size:11px;padding:9px 8px}
+  .login-panel{padding:28px 20px}
+}
 """
 
 def make_password(password, salt=None):
@@ -245,20 +524,92 @@ def esc(x):
 def nav(user):
     if not user:
         return ""
-    links=[("Dashboard","/dashboard"),("Books","/books")]
+    links=[("⌂","Dashboard","/dashboard"),("▣","Books","/books")]
     if user["role"]=="Member":
-        links += [("My Profile","/my/profile"),("My Loans","/my/loans")]
+        links += [("◉","My Profile","/my/profile"),("▤","My Loans","/my/loans")]
     if user["role"] in ("Admin","Librarian"):
-        links += [("Categories","/categories"),("Members","/members"),("Loans","/loans"),("Borrow","/borrow"),("Overdue","/overdue")]
+        links += [("◇","Categories","/categories"),("♙","Members","/members"),("⇄","Loans","/loans"),("＋","Borrow","/borrow"),("!","Overdue","/overdue")]
     if user["role"]=="Admin":
-        links += [("Users","/users")]
-    links += [("Logout","/logout")]
-    return "".join(f'<a href="{u}">{esc(t)}</a>' for t,u in links)
+        links += [("⚙","Users","/users")]
+    links += [("↪","Logout","/logout")]
+    out=[]
+    for icon,label,url in links:
+        cls="logout" if url=="/logout" else ""
+        out.append(f'<a class="{cls}" href="{url}"><span class="nav-icon">{icon}</span><span class="nav-text">{esc(label)}</span></a>')
+    return "".join(out)
 
 def page(title,body,user=None):
-    who=f'{esc(user["username"])} · {esc(user["role"])}' if user else ""
-    return f"<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{esc(title)} — {APP_TITLE}</title><style>{CSS}</style></head><body><header><h1>{APP_TITLE}</h1><div>{nav(user)} <span class='small' style='color:#d9e8f5'>{who}</span></div></header><main>{body}</main></body></html>"
+    if not user:
+        return f"<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{esc(title)} — {APP_TITLE}</title><style>{CSS}</style></head><body>{body}</body></html>"
+    who=f'{esc(user["username"])} · {esc(user["role"])}'
+    return f"""<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>{esc(title)} — {APP_TITLE}</title>
+<style>{CSS}</style>
+</head>
+<body>
+<div class='app-shell'>
+  <aside class='sidebar'>
+    <div class='brand'>
+      <div class='brand-mark'>📚</div>
+      <div>
+        <div class='brand-title'>Library LMS</div>
+        <div class='brand-sub'>MANAGEMENT SYSTEM</div>
+      </div>
+    </div>
+    <div class='user-card'>
+      <div class='user-name'>{esc(user["username"])}</div>
+      <div class='user-role'>{esc(user["role"])}</div>
+    </div>
+    <nav class='side-nav'>{nav(user)}</nav>
+    <div class='sidebar-foot'>Academic Project · 2026<br>Library Management System</div>
+  </aside>
+  <section class='workspace'>
+    <header class='topbar'>
+      <h1>{esc(title)}</h1>
+      <div class='topbar-meta'>Signed in as <b>{who}</b></div>
+    </header>
+    <main>{body}</main>
+    <div class='footer'>Library Management System · Academic Reference Build</div>
+  </section>
+</div>
+</body>
+</html>"""
 
+def login_view(error=""):
+    err=f"<div class='alert'><span class='error'>{esc(error)}</span></div>" if error else ""
+    return f"""<div class='login-wrap'>
+  <section class='login-visual'>
+    <div class='login-logo'>📚</div>
+    <h1>Library Management System</h1>
+    <p>A clean academic library platform for books, members, borrowing, returns, availability, and overdue-loan monitoring.</p>
+    <div class='feature-list'>
+      <div class='feature-item'>✓ Role-based access</div>
+      <div class='feature-item'>✓ Book & category management</div>
+      <div class='feature-item'>✓ Borrowing & returns</div>
+      <div class='feature-item'>✓ Member self-service</div>
+    </div>
+  </section>
+  <section class='login-panel'>
+    <div class='login-card'>
+      <div class='eyebrow'>Welcome back</div>
+      <h2>Sign in</h2>
+      <p class='intro'>Enter your account details to access the library dashboard.</p>
+      {err}
+      <form method='post' action='/login'>
+        <label>Username</label>
+        <input name='username' autocomplete='username' placeholder='Enter username' required>
+        <label>Password</label>
+        <input type='password' name='password' autocomplete='current-password' placeholder='Enter password' required>
+        <button>Sign in →</button>
+      </form>
+      <div class='demo-box'><b>Demo Admin</b><br>Username: admin<br>Password: Admin@12345</div>
+    </div>
+  </section>
+</div>"""
 def fv(d,k,default=""):
     return d.get(k,[default])[0]
 
@@ -317,7 +668,7 @@ class LMSHandler(BaseHTTPRequestHandler):
         if path in ("/","/login"):
             if self.current_user():
                 return self.redirect("/dashboard")
-            return self.send_html(page("Login","<div class='card login'><h2>Sign in</h2><form method='post' action='/login'><label>Username</label><input name='username' required><label>Password</label><input type='password' name='password' required><button>Sign in</button></form><p class='small'>Demo: admin / Admin@12345</p></div>"))
+            return self.send_html(page("Login",login_view()))
         if path=="/logout":
             sid=self.cookies().get("sid")
             if sid:
@@ -329,7 +680,27 @@ class LMSHandler(BaseHTTPRequestHandler):
             if not u:
                 return
             c=self.db.counts()
-            body="<h2>Dashboard</h2><div class='grid'>"+"".join(f"<div class='card'><div class='metric'>{v}</div><div>{k}</div></div>" for k,v in [("Books",c['books']),("Members",c['members']),("Open loans",c['open']),("Overdue",c['overdue'])])+"</div>"
+            body=f"""
+<div class='hero'>
+  <div class='hero-badge'>● System operational</div>
+  <h2>Welcome to the Library Dashboard</h2>
+  <p>Monitor the collection, members, circulation activity, and overdue loans from one clean workspace.</p>
+</div>
+<div class='stats-grid'>
+  <div class='stat-card'><div><div class='metric'>{c['books']}</div><div class='metric-label'>Books</div></div><div class='stat-icon'>▣</div></div>
+  <div class='stat-card cyan'><div><div class='metric'>{c['members']}</div><div class='metric-label'>Members</div></div><div class='stat-icon'>♙</div></div>
+  <div class='stat-card success'><div><div class='metric'>{c['open']}</div><div class='metric-label'>Open loans</div></div><div class='stat-icon'>⇄</div></div>
+  <div class='stat-card danger'><div><div class='metric'>{c['overdue']}</div><div class='metric-label'>Overdue loans</div></div><div class='stat-icon'>!</div></div>
+</div>
+<div class='card'>
+  <div class='card-head'>
+    <div><h3 style='margin-bottom:5px'>Quick actions</h3><div class='small'>Common library operations</div></div>
+  </div>
+  <div class='quick-actions'>
+    <a class='btn' href='/books'>▣ Browse books</a>
+    {("<a class='btn' href='/borrow'>＋ Register borrowing</a><a class='btn secondary' href='/members'>♙ Members</a><a class='btn secondary' href='/loans'>⇄ Current loans</a>" if u['role'] in ('Admin','Librarian') else "<a class='btn secondary' href='/my/loans'>▤ My loans</a>")}
+  </div>
+</div>"""
             return self.send_html(page("Dashboard",body,u))
         if path=="/books":
             u=self.require()
@@ -446,7 +817,7 @@ class LMSHandler(BaseHTTPRequestHandler):
             if path=="/login":
                 user,err=self.db.authenticate(fv(d,"username"),fv(d,"password"))
                 if err:
-                    return self.send_html(page("Login",f"<div class='card login'><h2>Sign in</h2><p class='error'>{esc(err)}</p><form method='post'><input name='username' required><input type='password' name='password' required><button>Sign in</button></form></div>"),401)
+                    return self.send_html(page("Login",login_view(err)),401)
                 token=secrets.token_urlsafe(32)
                 with SESSIONS_LOCK:
                     SESSIONS[token]={"user":user,"last":datetime.now()}
